@@ -65,6 +65,7 @@ $("#theForm").submit(function( event ) {
 */
 
 function explode (id, width, height, tileSrc) {
+  int tileCount = 0;
   var tileWidth = tileSrc.width;
   var tileHeight = tileSrc.height || tileSrc.width;
   var factors = tileSrc.scaleFactors.sort(function(a,b){return b-a}); // spec doesn't actually specify order
@@ -97,6 +98,7 @@ function explode (id, width, height, tileSrc) {
         var tw = Math.min(tileWidth, scaledWidthRemaining);
         var iiifArgs = "/" + region + "/" + tw + ",/0/default.jpg";
         $row.append("<div><img src='" + id + iiifArgs +"' /><br/>" + iiifArgs + "</div>");
+        tileCount++;
         x += regionWidth;
       }
       $('.container').append($row);
@@ -104,6 +106,7 @@ function explode (id, width, height, tileSrc) {
     }
     $('.container').append("<hr/>");
   }
+  $('.container').append("<p> total tiles: " + tileCount + "</p>");
 }
 
 </script>
