@@ -9,6 +9,7 @@
       .container div.row div {display: inline-block; white-space: normal; margin-right:20px; margin-bottom: 8px;}
       hr { clear: both; margin-top:8px;}
       p { font-size: 14px;}
+      #infoJson { width: 600px;}
     </style>
 </head>
 <body>
@@ -16,7 +17,7 @@
 <h1>Pyramids - how IIIF enables Deep Zoom</h1>
 
 <form id="theForm">
-<input type="text" id="infoJson" /> <input type="submit" value="go!" />
+<input type="text" id="infoJson" value="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json" /> <input type="submit" value="go!" />
 </form>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -25,7 +26,7 @@
 $("#theForm").submit(function( event ) {
   event.preventDefault();
   var infoJson = $('#infoJson').val();
-  var jqxhr = $.get( { url:infoJson, dataType:"json" } )
+  var jqxhr = $.ajax( { url:infoJson, dataType:"json" } )
     .done(function(data) {
       if(data && data.protocol && data.protocol=="http://iiif.io/api/image") {
         if(data.width && data.tiles && data.tiles[0]) {
@@ -69,6 +70,8 @@ function explode (id, width, height, tileSrc) {
   var factors = tileSrc.scaleFactors.sort(function(a,b){return b-a}); // spec doesn't actually specify order
   for(var i=0; i<factors.length;i++){
     var scale = factors[i];
+
+    $('.container').append('<p>Scale factor: ' + scale + "</p>");
     // What region does a tile cover at this scale?
     var regionWidth = scale*tileWidth;
     var regionHeight = scale*tileHeight;
@@ -78,26 +81,28 @@ function explode (id, width, height, tileSrc) {
 
     var y = 0;
     while(y < height){
-      var $row = $('.container').append("<div class='row' />");
+      var $row = $("<div class='row'></div>");
       var x = 0;
       while(x < width){
         var region;
-        if(regionWidth >= tileWidth && regionHeight >= tileHeight){
+        var scaledWidthRemaining = Math.ceil((width - x) / scale);
+        //var scaledHeightRemaining = Math.ceil((height - y) / scale);
+        if(scaleWidth <= tileWidth && scaleHeight <= tileHeight){
             region = 'full';
         } else {
-          var rw = Math.min(regionWidth, scaleWidth - x);
-          var wh = Math.min(regionHeight, scaleHeight - y);
+          var rw = Math.min(regionWidth, width - x);
+          var rh = Math.min(regionHeight, height - y);
           region = x + "," + y + "," + rw + "," + rh;
         }
-        var scaleRemainder = Math.ceil((width - x) / scale);
-        var tw = Math.min(tileWidth, scaleRemainder);
+        var tw = Math.min(tileWidth, scaledWidthRemaining);
         var iiifArgs = "/" + region + "/" + tw + ",/0/default.jpg";
         $row.append("<div><img src='" + id + iiifArgs +"' /><br/>" + iiifArgs + "</div>");
-        x += tileWidth;
+        x += regionWidth;
       }
-      y += tileHeight;
-      $('.container').append("<hr/>");
+      $('.container').append($row);
+      y += regionHeight;
     }
+    $('.container').append("<hr/>");
   }
 }
 
