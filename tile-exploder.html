@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Links</title>
+    <style>
+      body{ font-family: sans-serif; font-size: 11px;}
+      .container {overflow-x: scroll; }
+      .container div.row {clear:both;  white-space: nowrap;}
+      .container div.row div {display: inline-block; white-space: normal; margin-right:20px; margin-bottom: 8px;}
+      hr { clear: both; margin-top:8px;}
+      p { font-size: 14px;}
+    </style>
+</head>
+<body>
+
+<h1>Pyramids - how IIIF enables Deep Zoom</h1>
+
+<form id="theForm">
+<input type="text" id="infoJson" /> <input type="submit" value="go!" />
+</form>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+
+$("#theForm").submit(function( event ) {
+  event.preventDefault();
+  var infoJson = $('#infoJson').val();
+  var jqxhr = $.get( { url:infoJson, dataType:"json" } )
+    .done(function(data) {
+      if(data && data.protocol && data.protocol=="http://iiif.io/api/image") {
+        if(data.width && data.tiles && data.tiles[0]) {
+          explode(data["@id"], data.width, data.height, data.tiles[0])
+        } else {
+            alert("This tool needs a tile source");
+        }
+      } else {
+        alert("not an info.json...");
+      }
+    })
+    .fail(function(){
+      alert("couldn't load " + infoJson);
+    });
+});
+
+
+/*
+"width": 11129,
+"height": 8872,
+"tiles": [
+  {
+    "width": 256,
+    "height": 256,
+    "scaleFactors": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ]
+  }
+],
+*/
+
+function explode (id, width, height, tileSrc) {
+  var tileWidth = tileSrc.width;
+  var tileHeight = tileSrc.height || tileSrc.width;
+  var factors = tileSrc.scaleFactors.sort(function(a,b){return b-a}); // spec doesn't actually specify order
+  for(var i=0; i<factors.length;i++){
+    var scale = factors[i];
+    // What region does a tile cover at this scale?
+    var regionWidth = scale*tileWidth;
+    var regionHeight = scale*tileHeight;
+    // How big is the image we are tiling?
+    var scaleWidth = Math.ceil(width / scale);
+    var scaleHeight = Math.ceil(height / scale);
+
+    var y = 0;
+    while(y < height){
+      var $row = $('.container').append("<div class='row' />");
+      var x = 0;
+      while(x < width){
+        var region;
+        if(regionWidth >= tileWidth && regionHeight >= tileHeight){
+            region = 'full';
+        } else {
+          var rw = Math.min(regionWidth, scaleWidth - x);
+          var wh = Math.min(regionHeight, scaleHeight - y);
+          region = x + "," + y + "," + rw + "," + rh;
+        }
+        var scaleRemainder = Math.ceil((width - x) / scale);
+        var tw = Math.min(tileWidth, scaleRemainder);
+        var iiifArgs = "/" + region + "/" + tw + ",/0/default.jpg";
+        $row.append("<div><img src='" + id + iiifArgs +"' /><br/>" + iiifArgs + "</div>");
+        x += tileWidth;
+      }
+      y += tileHeight;
+      $('.container').append("<hr/>");
+    }
+  }
+}
+
+</script>
+
+<div class="container">
+
+</div>
+
+</body>
+</html>
