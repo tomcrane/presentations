@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Links</title>
+    <title>Pyramid 256 - how IIIF enables Deep Zoom</title>
     <style>
       body{ font-family: sans-serif; font-size: 11px;}
       .container {overflow-x: scroll; }
@@ -18,15 +18,20 @@
 
 <div class="container">
 
-<p><a href="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json">/info.json</a></p>
+<p><a href="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json">/info.json</a>
+Source image is 11129 x 8872 pixels (100 Megapixels)
+</p>
 <hr/>
-
+<p>Scale factor 256:  a 256 tile covers less than entire original image</p>
 <img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/full/44,/0/default.jpg"/><br/> /full/44,/0/default.jpg
 <hr/>
+<p>Scale factor 128:  a 256 tile covers less than entire original image</p>
 <img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/full/87,/0/default.jpg" /><br/>  /full/87,/0/default.jpg
 <hr/>
+<p>Scale factor 64:  a 256 tile covers less than entire original image</p>
 <img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/full/174,/0/default.jpg" /><br/>  /full/174,/0/default.jpg
 <hr/>
+<p>Scale factor 32:  each 256x256 tile corresponds to 8192x8192 pixels in the original image</p>
 <div class="row">
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/0,0,8192,8192/256,/0/default.jpg" /><br/>  /0,0,8192,8192/256,/0/default.jpg</div>
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/8192,0,2937,8192/92,/0/default.jpg" /><br/>  /8192,0,2937,8192/92,/0/default.jpg</div>
@@ -36,6 +41,7 @@
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/8192,8192,2937,680/92,/0/default.jpg" /></br>  /8192,8192,2937,680/92,/0/default.jpg</div>
 </div>
 <hr/>
+<p>Scale factor 16:  each 256x256 tile corresponds to 4096x4096 pixels in the original image</p>
 <div class="row">
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/0,0,4096,4096/256,/0/default.jpg" /><br/>/0,0,4096,4096/256,/0/default.jpg</div>
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/4096,0,4096,4096/256,/0/default.jpg" /><br/>/4096,0,4096,4096/256,/0/default.jpg</div>
@@ -52,9 +58,16 @@
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/8192,8192,2937,680/184,/0/default.jpg" /><br/>/8192,8192,2937,680/184,/0/default.jpg</div>
 </div>
 <hr/>
-<p>And so on down to the available resolution:</p>
+<p>Scale factor 8:  each 256x256 tile corresponds to 2048x2048 pixels in the original image</p>
+<p><i>(not shown)</i></p>
 <hr/>
-
+<p>Scale factor 4:  each 256x256 tile corresponds to 1024x1024 pixels in the original image</p>
+<p><i>(not shown)</i></p>
+<hr/>
+<p>Scale factor 2:  each 256x256 tile corresponds to 512x512 pixels in the original image</p>
+<p><i>(not shown)</i></p>
+<hr/>
+<p>Scale factor 1:  each 256x256 tile corresponds to 256x256 pixels in the original image</p>
 
 <div class="row">
 <div><img src="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/6144,4864,256,256/256,/0/default.jpg" /><br/>/6144,4864,256,256/256,/0/default.jpg</div>

@@ -17,8 +17,10 @@
 <h1>Pyramids - how IIIF enables Deep Zoom</h1>
 
 <form id="theForm">
-<input type="text" id="infoJson" value="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json" /> <input type="submit" value="go!" />
+  <input type="text" id="infoJson" value="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json" /> <input type="submit" value="go!" />
 </form>
+
+<div class="container"></div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
@@ -43,27 +45,6 @@ $("#theForm").submit(function( event ) {
     });
 });
 
-
-/*
-"width": 11129,
-"height": 8872,
-"tiles": [
-  {
-    "width": 256,
-    "height": 256,
-    "scaleFactors": [
-      1,
-      2,
-      4,
-      8,
-      16,
-      32,
-      64
-    ]
-  }
-],
-*/
-
 function explode (id, width, height, tileSrc) {
   var tileCount = 0;
   var tileWidth = tileSrc.width;
@@ -86,8 +67,6 @@ function explode (id, width, height, tileSrc) {
       var x = 0;
       while(x < width){
         var region;
-        var scaledWidthRemaining = Math.ceil((width - x) / scale);
-        //var scaledHeightRemaining = Math.ceil((height - y) / scale);
         if(scaleWidth <= tileWidth && scaleHeight <= tileHeight){
             region = 'full';
         } else {
@@ -95,6 +74,7 @@ function explode (id, width, height, tileSrc) {
           var rh = Math.min(regionHeight, height - y);
           region = x + "," + y + "," + rw + "," + rh;
         }
+        var scaledWidthRemaining = Math.ceil((width - x) / scale);
         var tw = Math.min(tileWidth, scaledWidthRemaining);
         var iiifArgs = "/" + region + "/" + tw + ",/0/default.jpg";
         $row.append("<div><img src='" + id + iiifArgs +"' /><br/>" + iiifArgs + "</div>");
@@ -106,14 +86,9 @@ function explode (id, width, height, tileSrc) {
     }
     $('.container').append("<hr/>");
   }
-  $('.container').append("<p> total tiles: " + tileCount + "</p>");
+  $('.container').prepend("<p> total tiles: " + tileCount + "</p>");
 }
 
 </script>
-
-<div class="container">
-
-</div>
-
 </body>
 </html>
