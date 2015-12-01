@@ -1,3 +1,7 @@
+15 minutes; allow 1-2 mins for questions at end
+
+No slides - just live demos
+
 ## Background
 
 * Digirati, Wellcome, DDS, Player...
@@ -16,21 +20,21 @@
 ## Late 2014-early 2015: British Library
 
 * Digirati produce Universal Viewer
-* Lots of new features, IIIF support
+* Lots of new features, IIIF support (DEMOS)
   * Super thumbs
   * 2-up
   * Theming
-  * etc... (add more here)
+  * etc... (add more features here!)
 * New home at github.com/universalviewer
 
 ## 2015: National Library of Wales
 
-* Add Internationalisation support
+* Add Internationalisation support (DEMO)
 
 ## 2015: Wellcome Library
 
 * Aim for feature parity with Player, so Wellcome can go fully IIIF
-* requires non-IIIF features:
+* requires non-IIIF features: (DEMOS)
   * Authentication
   * Search
     * These two inform the newest IIIF specs
@@ -40,7 +44,11 @@
 
 ## 2015 - community
 
-* Adopted by:
+* More features (DEMOS)
+  * Downloads
+  * config editing
+  * ...more
+* Adopted by: (brief flash of examples from different places)
   * Wellcome Library
   * British Library
   * National Library of Wales
@@ -50,7 +58,7 @@
 
 ## 2016
 
-* Official IxIF
+* Adopt IxIF as it emerges
 * More Features
 * Save our Sounds (ask BL about this first)
 * More adoption
