@@ -2,11 +2,11 @@
 
 No slides - just live demos
 
-## Background
+## Background (very brief)
 
-* Digirati, Wellcome, DDS, Player...
+* How it all started, Digirati, Wellcome, DDS, Player... v brief
 * Wellcome Player - Silo, bespoke data format
-* Audio, Video, Born-Digital
+* Audio, Video, Born-Digital: Explain how Player design modular from the start which sets up nicely for IxIF later
 * Heard about IIIF and did an Image API test
 * Made Player open source (some adoption)
 
@@ -14,12 +14,12 @@ No slides - just live demos
 
 * BL do a competitive design review of viewers
 * They like the Wellcome Player; see that it can be basis of their "Universal Viewer" project
-* BL were there at the start of IIIF
+* BL were there at the start of IIIF, skin in the game
 * The **Universal Viewer** is born, as a concept
 
 ## Late 2014-early 2015: British Library
 
-* Digirati produce Universal Viewer
+* Digirati make Universal Viewer with BL team
 * Lots of new features, IIIF support (DEMOS)
   * Super thumbs
   * 2-up
@@ -41,12 +41,16 @@ No slides - just live demos
   * Audio
   * Video
   * Born-Digital
+  * (explain how the Presentation API is extensible; these are manifests too! Bare minimum to meet Wellcome reqt)
 
 ## 2015 - community
 
 * More features (DEMOS)
-  * Downloads
+  * Download menu
   * config editing
+  * Collections
+    * To model multi-volume works
+    * navDate for date UI (Chemist and Druggist)
   * ...more
 * Adopted by: (brief flash of examples from different places)
   * Wellcome Library
@@ -54,12 +58,12 @@ No slides - just live demos
   * National Library of Wales
   * Digital.Bodleian
   * Villanova
-  * etc
+  * etc (add more)
 
 ## 2016
 
 * Adopt IxIF as it emerges
-* More Features
+* More Features - annotations
 * Save our Sounds (ask BL about this first)
 * More adoption
 * More collaborators
