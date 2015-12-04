@@ -2,7 +2,7 @@
 
 # The brief
 
-> We would greatly appreciate it if you would speak at the IIIF dissemination event in Ghent in December about the Universal Viewer, particularly with a focus on the implementation of the Presentation API. The aim for the presentation is to be inspirational and demonstrate the value of IIIF adoption, rather than any technical details.  Compared to the DC event, it would be great to focus on the features and uses of the viewer, rather than the ease of installation. 
+> We would greatly appreciate it if you would speak at the IIIF dissemination event in Ghent in December about the Universal Viewer, particularly with a focus on the implementation of the Presentation API. The aim for the presentation is to be inspirational and demonstrate the value of IIIF adoption, rather than any technical details.  Compared to the DC event, it would be great to focus on the features and uses of the viewer, rather than the ease of installation.
 
 >You would again have a 15 minute slot, with the possibility of one question, and the rest being held for the Q&A session afterwards.
 
@@ -11,6 +11,9 @@
 No slides - just live demos
 
 ## Background (very brief)
+
+Couple of static images showing player, blog posts with embedded, etc.
+(these are slide-like)
 
 * How it all started, Digirati, Wellcome, DDS, Player... v brief
 * Wellcome Player - Silo, bespoke data format
@@ -43,8 +46,8 @@ No slides - just live demos
 
 * Aim for feature parity with Player, so Wellcome can go fully IIIF
 * requires non-IIIF features: (DEMOS)
-  * Authentication
-  * Search
+  * Authentication http://wellcomelibrary.org/item/b19831079 (CAS)
+  * Search http://wellcomelibrary.org/item/b18246813 (MoH report, not too big)
     * These two inform the newest IIIF specs
   * Audio
   * Video
