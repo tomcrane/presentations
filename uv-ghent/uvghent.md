@@ -31,7 +31,7 @@ Couple of static images showing player, blog posts with embedded, etc.
 ## Late 2014-early 2015: British Library
 
 * Digirati make Universal Viewer with BL team
-* Lots of new features, IIIF support (DEMOS)
+* Lots of new features, IIIF support (DEMOS) - use 
   * Super thumbs
   * 2-up
   * Theming
