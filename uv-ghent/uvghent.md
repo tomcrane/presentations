@@ -30,12 +30,19 @@ Couple of static images showing player, blog posts with embedded, etc.
 
 ## Late 2014-early 2015: British Library
 
-* Digirati make Universal Viewer with BL team
-* Lots of new features, IIIF support (DEMOS) - use 
-  * Super thumbs
+(DEMOS) - use http://tomcrane.github.io/presentations/uv-ghent/manifests/wunder-dds.json
+* Digirati make Universal Viewer with BL
+* Convert Existing features:
+  * Deep Zoom
+  * Thumbnails
+  * Contents
+  * Page Navigation
+* Lots of new features, IIIF support
+  * Super thumbs, scalable
   * 2-up
-  * Theming
-  * etc... (add more features here!)
+  * Theming (show the same book at http://wellcomelibrary.org/item/b18035723)
+  * metadata, rights and licensing
+  * settings
 * New home at github.com/universalviewer
 
 ## 2015: National Library of Wales
@@ -45,8 +52,9 @@ Couple of static images showing player, blog posts with embedded, etc.
 ## 2015: Wellcome Library
 
 * Aim for feature parity with Player, so Wellcome can go fully IIIF
+* Event firing (for GA, bookmarking etc)
 * requires non-IIIF features: (DEMOS)
-  * Authentication http://wellcomelibrary.org/item/b19831079 (CAS)
+  * Authentication http://wellcomelibrary.org/item/b19831079 (CAS - sign in with Twitter)
   * Search http://wellcomelibrary.org/item/b18246813 (MoH report, not too big)
     * These two inform the newest IIIF specs
   * Audio
@@ -64,6 +72,7 @@ Couple of static images showing player, blog posts with embedded, etc.
     * navDate for date UI (Chemist and Druggist)
   * ...more
 * Adopted by: (brief flash of examples from different places)
+https://github.com/UniversalViewer/universalviewer/wiki/Examples-of-Use
   * Wellcome Library
   * British Library
   * National Library of Wales
