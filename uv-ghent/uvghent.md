@@ -1,4 +1,6 @@
-## Background (very brief)
+Intro:
+
+## Background
 
 Couple of static images showing player, blog posts with embedded, etc.
 (these are slide-like)
@@ -82,6 +84,4 @@ Couple of static images showing player, blog posts with embedded, etc.
 * More collaborators
 
 
-## And another thing...
-
-* 3D
+## To finish
