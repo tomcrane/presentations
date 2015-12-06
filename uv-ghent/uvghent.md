@@ -55,9 +55,10 @@ Couple of static images showing player, blog posts with embedded, etc.
 * Event firing (for GA, bookmarking etc)
 * requires non-IIIF features: (DEMOS)
   * Authentication:
-    * b19831079 -  [(CAS - sign in at Wellcome)](http://wellcomelibrary.org/item/b19831079)
-    * b11599820 -  [(Degraded)](http://wellcomelibrary.org/item/b11599820)
-    * b19831122 -  ["6th Layer Line" (Clickthrough)](http://wellcomelibrary.org/item/b19831122)
+    * b19831079 -  ["A Protein: Miscellaneous"](http://wellcomelibrary.org/item/b19831079) (CAS - sign in at Wellcome)
+    * b11599820 -  [Sixteen feet in profile, of women and men](http://wellcomelibrary.org/item/b11599820) (Degraded)
+    * b19831122 -  ["6th Layer Line"](http://wellcomelibrary.org/item/b19831122) (Clickthrough)
+    * b18174942 -  ['1989 Neural Edelmanism'](http://wellcomelibrary.org/item/b18174942) ("Pure" clickthrough)
   * Search: b18246813 - [(MoH report)](http://universalviewer.io/examples/?manifest=http://wellcomelibrary.org/iiif/b18246813/manifest)
   * (Auth and Search inform the newest IIIF specs)
   * Audio b17307922 - [(Florence Nightingale)](http://universalviewer.io/examples/?manifest=http://wellcomelibrary.org/iiif/b17307922/manifest)
