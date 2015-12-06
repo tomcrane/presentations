@@ -1,15 +1,3 @@
-15 minutes; allow 1-2 mins for questions at end
-
-# The brief
-
-> We would greatly appreciate it if you would speak at the IIIF dissemination event in Ghent in December about the Universal Viewer, particularly with a focus on the implementation of the Presentation API. The aim for the presentation is to be inspirational and demonstrate the value of IIIF adoption, rather than any technical details.  Compared to the DC event, it would be great to focus on the features and uses of the viewer, rather than the ease of installation.
-
->You would again have a 15 minute slot, with the possibility of one question, and the rest being held for the Q&A session afterwards.
-
-# The Presentation
-
-No slides - just live demos
-
 ## Background (very brief)
 
 Couple of static images showing player, blog posts with embedded, etc.
