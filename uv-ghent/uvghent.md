@@ -65,7 +65,7 @@ Couple of static images showing player, blog posts with embedded, etc.
   * config editing
   * Collections allow us to model:
     * [multi-volume works](http://universalviewer.io/examples/?manifest=http://wellcomelibrary.org/iiif/collection/b18031511)
-    * [Periodicals](http://wellcomelibrary.org/iiif/collection/b19974760) (Chemist and Druggist)
+    * [Periodicals](http://wellcomelibrary.org/item/b19974760) (Chemist and Druggist)
   * ...more
 * UV in use: [(updates)](https://github.com/UniversalViewer/universalviewer/wiki/Examples-of-Use)
   * Wellcome Library
