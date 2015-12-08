@@ -73,6 +73,7 @@ Couple of static images showing player, blog posts with embedded, etc.
   * National Library of Wales (Get good example from Glen)
   * [Digital.Bodleian](http://digital.bodleian.ox.ac.uk/inquire/Discover/Search/#/?p=c+2,t+euclid,rsrs+0,rsps+10,fa+,so+ox%3Asort%5Easc,scids+,pid+,vi+)
   * [Villanova University](http://digital.library.villanova.edu/Item/vudl:24299/Viewer#?si=0&ci=0)
+  * Swedish National Archives
   * more...
 
 ## 2016
