@@ -1,0 +1,79 @@
+{
+  "@id": "http://tomcrane.github.io/presentations/uv-ghent/candd-day.json",
+  "@type": "sc:Collection",
+  "label": "15. September 1859",
+  "navDate": "1859-09-15T00:00:00.0000000",
+  "manifests": [
+    {
+      "@id": "http://wellcomelibrary.org/iiif/b19974760-0/manifest",
+      "@type": "sc:Manifest",
+      "label": "Morning edition",
+      "metadata": [
+        {
+          "label": "Volume",
+          "value": "1"
+        },
+        {
+          "label": "Year",
+          "value": "1859"
+        },
+        {
+          "label": "Month",
+          "value": "September"
+        },
+        {
+          "label": "Display Date",
+          "value": "15. September 1859"
+        }
+      ],
+      "navDate": "1859-09-15T00:00:00.0000000"
+    },
+    {
+      "@id": "http://wellcomelibrary.org/iiif/b19974760-0/manifest",
+      "@type": "sc:Manifest",
+      "label": "Evening edition",
+      "metadata": [
+        {
+          "label": "Volume",
+          "value": "1"
+        },
+        {
+          "label": "Year",
+          "value": "1859"
+        },
+        {
+          "label": "Month",
+          "value": "September"
+        },
+        {
+          "label": "Display Date",
+          "value": "15. September 1859"
+        }
+      ],
+      "navDate": "1859-09-15T00:00:00.0000000"
+    },
+    {
+      "@id": "http://wellcomelibrary.org/iiif/b19974760-0/manifest",
+      "@type": "sc:Manifest",
+      "label": "Colour supplement",
+      "metadata": [
+        {
+          "label": "Volume",
+          "value": "1"
+        },
+        {
+          "label": "Year",
+          "value": "1859"
+        },
+        {
+          "label": "Month",
+          "value": "September"
+        },
+        {
+          "label": "Display Date",
+          "value": "15. September 1859"
+        }
+      ],
+      "navDate": "1859-09-15T00:00:00.0000000"
+    }
+}

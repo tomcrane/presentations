@@ -65,7 +65,7 @@ Couple of static images showing player, blog posts with embedded, etc.
   * config editing
   * Collections allow us to model:
     * [multi-volume works](http://universalviewer.io/examples/?manifest=http://wellcomelibrary.org/iiif/collection/b18031511)
-    * [Periodicals](http://wellcomelibrary.org/iiif/collection/b19974760) (Chemist and Druggist)
+    * [Periodicals](http://wellcomelibrary.org/item/b19974760) (Chemist and Druggist)
   * ...more
 * UV in use: [(updates)](https://github.com/UniversalViewer/universalviewer/wiki/Examples-of-Use)
   * Wellcome Library
@@ -73,6 +73,7 @@ Couple of static images showing player, blog posts with embedded, etc.
   * National Library of Wales (Get good example from Glen)
   * [Digital.Bodleian](http://digital.bodleian.ox.ac.uk/inquire/Discover/Search/#/?p=c+2,t+euclid,rsrs+0,rsps+10,fa+,so+ox%3Asort%5Easc,scids+,pid+,vi+)
   * [Villanova University](http://digital.library.villanova.edu/Item/vudl:24299/Viewer#?si=0&ci=0)
+  * Swedish National Archives
   * more...
 
 ## 2016
