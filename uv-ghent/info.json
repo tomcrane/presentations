@@ -1,6 +1,6 @@
 {
   "@context": "http://iiif.io/api/image/2/context.json",
-  "@id": "http://localhost:8000/test/data/iiif_2_0_sizes",
+  "@id": "http://tomcrane.github.io/presentations/uv-ghent",
   "protocol": "http://iiif.io/api/image",
   "width": 6976,
   "height": 5074,
