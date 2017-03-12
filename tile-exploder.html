@@ -17,7 +17,7 @@
 <h1>Pyramids - how IIIF enables Deep Zoom</h1>
 
 <form id="theForm">
-  <input type="text" id="infoJson" value="http://wellcomelibrary.org/iiif-img/b11768241-0/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json" /> <input type="submit" value="go!" />
+  <input type="text" id="infoJson" value="https://dlcs.io/iiif-img/2/1/e75d37c5-40a1-48a4-b61b-52ac7aa26849/info.json" /> <input type="submit" value="go!" />
 </form>
 
 <div class="container"></div>
@@ -77,7 +77,7 @@ function explode (id, width, height, tileSrc) {
         var scaledWidthRemaining = Math.ceil((width - x) / scale);
         var tw = Math.min(tileWidth, scaledWidthRemaining);
         var iiifArgs = "/" + region + "/" + tw + ",/0/default.jpg";
-        $row.append("<div><img src='" + id + iiifArgs +"' /><br/>" + iiifArgs + "</div>");
+        $row.append("<div><img class='tile' data-src='" + id + iiifArgs +"' width='" + tw + "'  /><br/>" + iiifArgs + "</div>");
         tileCount++;
         x += regionWidth;
       }
@@ -87,8 +87,71 @@ function explode (id, width, height, tileSrc) {
     $('.container').append("<hr/>");
   }
   $('.container').prepend("<p> total tiles: " + tileCount + "</p>");
+  
+    $("img.tile").unveil(300);
 }
 
+
+
+
+/**
+ * jQuery Unveil
+ * A very lightweight jQuery plugin to lazy load images
+ * http://luis-almeida.github.com/unveil
+ *
+ * Licensed under the MIT license.
+ * Copyright 2013 Lu�s Almeida
+ * https://github.com/luis-almeida
+ */
+
+; (function ($) {
+
+    $.fn.unveil = function (threshold, callback) {
+
+        var $v = $(".viewer"), $w = $(window),
+            th = threshold || 0,
+            retina = window.devicePixelRatio > 1,
+            attrib = retina ? "data-src-retina" : "data-src",
+            images = this,
+            loaded;
+
+        this.one("unveil", function () {
+            var source = this.getAttribute(attrib);
+            source = source || this.getAttribute("data-src");
+            if (source) {
+                console.log("setting src " + source);
+                this.setAttribute("src", source);
+                if (typeof callback === "function") callback.call(this);
+            }
+        });
+
+        function unveil() {
+            var inview = images.filter(function () {
+                var $e = $(this);
+                if ($e.is(":hidden")) return;
+
+                var wt = $w.scrollTop(),
+                    wb = wt + $w.height(),
+                    et = $e.offset().top,
+                    eb = et + $e.height();
+
+                return eb >= wt - th && et <= wb + th;
+            });
+
+            loaded = inview.trigger("unveil");
+            images = images.not(loaded);
+        }
+
+        $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+        $v.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+
+        unveil();
+
+        return this;
+
+    };
+
+})(window.jQuery);
 </script>
 </body>
 </html>
