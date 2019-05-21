@@ -25,6 +25,11 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript">
 
+var qs = /img=(.*)/g.exec(window.location.search);
+if(qs && qs[1]){        
+    $('#infoJson').val(qs[1]);
+}
+
 $("#theForm").submit(function( event ) {
   event.preventDefault();
   var infoJson = $('#infoJson').val();
